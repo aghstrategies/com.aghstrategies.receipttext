@@ -1,17 +1,14 @@
 <?xml version="1.0"?>
 <extension key="com.aghstrategies.receipttext" type="module">
   <file>receipttext</file>
-  <name>FIXME</name>
-  <description>FIXME</description>
+  <name>Receipt Text Field</name>
+  <description>Adds a "Receipt Text" field to Offline Contribution Forms (both "New Contribution" and "New Credit Card Contribution") that displays when the "Send Receipt?" checkbox is checked. The text entered into the "Receipt Text" field is displayed in the receipt.</description>
   <license>AGPL-3.0</license>
   <maintainer>
     <author>Alice Frumin</author>
     <email>alice@aghstrategies.com</email>
   </maintainer>
   <urls>
-    <url desc="Main Extension Page">http://FIXME</url>
-    <url desc="Documentation">http://FIXME</url>
-    <url desc="Support">http://FIXME</url>
     <url desc="Licensing">http://www.gnu.org/licenses/agpl-3.0.html</url>
   </urls>
   <releaseDate>2020-09-02</releaseDate>
@@ -20,7 +17,6 @@
   <compatibility>
     <ver>5.0</ver>
   </compatibility>
-  <comments>This is a new, undeveloped module</comments>
   <classloader>
     <psr4 prefix="Civi\" path="Civi"/>
   </classloader>

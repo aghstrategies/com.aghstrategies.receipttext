@@ -1,15 +1,15 @@
 # com.aghstrategies.receipttext
 
-![Screenshot](/images/screenshot.png)
+Adds a "Receipt Text" field to Offline Contribution Forms (both "New Contribution" and "New Credit Card Contribution") that displays when the "Send Receipt?" checkbox is checked. The text entered into the "Receipt Text" field is displayed in the receipt. More documentation in https://github.com/civicrm/civicrm-core/pull/15605
 
-(*FIXME: In one or two paragraphs, describe what the extension does and why one would download it. *)
+![Receipt Text Field](images/receiptField.png)
 
 The extension is licensed under [AGPL-3.0](LICENSE.txt).
 
 ## Requirements
 
 * PHP v7.0+
-* CiviCRM (*FIXME: Version number*)
+* CiviCRM 5.24
 
 ## Installation (Web UI)
 
@@ -37,8 +37,17 @@ cv en receipttext
 
 ## Usage
 
-(* FIXME: Where would a new user navigate to get started? What changes would they see? *)
+1. Navigate to the Contact Summary of a contact with an email address.
+2. Go to the Contribution tab
+3. Click "New Contribution" or "New Credit Card Contribution"
+4. Check the "Send Receipt?" box
+
+### Before
+No Receipt Text field
+
+### After
+A Receipt Text field should appear, when populated the text should appear in the receipt wherever the {$receipt_text} token is.
 
 ## Known Issues
 
-(* FIXME *)
+None

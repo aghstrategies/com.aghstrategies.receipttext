@@ -3,10 +3,24 @@
 require_once 'receipttext.civix.php';
 use CRM_Receipttext_ExtensionUtil as E;
 
+function receipttext_civicrm_buildForm($formName, &$form) {
+  if ($formName == 'CRM_Contribute_Form_Contribution') {
+    // Add form field
+    $form->add('textarea', 'receipt_text', ts('Receipt Text'), ['rows' => 4, 'cols' => 50]);
+    CRM_Core_Resources::singleton()->addScriptFile('com.aghstrategies.receipttext', 'js/receiptText.js');
+
+    // Assumes templates are in a templates folder relative to this file.
+    $templatePath = realpath(dirname(__FILE__) . "/templates");
+    CRM_Core_Region::instance('form-body')->add(array(
+      'template' => "{$templatePath}/receiptText.tpl",
+    ));
+  }
+}
+
 /**
  * Implements hook_civicrm_config().
  *
- * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_config/ 
+ * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_config/
  */
 function receipttext_civicrm_config(&$config) {
   _receipttext_civix_civicrm_config($config);
